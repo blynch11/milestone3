@@ -1,47 +1,25 @@
 {% extends "base.html" %}
 {% block content %}
-    <h1 id="breweries-header">Breweries</h1>
 
-    <div class="row brewery-cards">
-        <div class="col-md-3">
-            <div class="card brewery-card" style="width: 18rem;">
-                <img class="card-img-top" src="..." alt="Card image cap">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
+ 
+
+    <h2 class="page-headers">{{ page_title }}</h2>
+
+    {% for brewery in breweries %}
+
+      
+          <div class="col-md-3">
+              <div class="card brewery-card" style="width: 18rem;">
+                  <img class="card-img-top" src="{{ brewery.image_source }}" alt="Card image cap">
+                  <div class="card-body">
+                    <h5 class="card-title">{{ brewery.name }}</h5>
+                    <p class="card-text">{{ brewery.description }}</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                  </div>
                 </div>
-              </div>
-        </div>
-        <div class="col-md-3">
-            <div class="card brewery-card" style="width: 18rem;">
-                <img class="card-img-top" src="..." alt="Card image cap">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-              </div>
-        </div>
-        <div class="col-md-3">
-            <div class="card brewery-card" style="width: 18rem;">
-                <img class="card-img-top" src="..." alt="Card image cap">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-              </div>
-        </div>
-       
+      </div>
 
-
-
-
-
-
-
-    </div>
+    {% endfor%}
 
 
 
