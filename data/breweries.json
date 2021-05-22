@@ -2,25 +2,30 @@
     {
         "name": "Kinnegar", 
         "description": "Kinnegar Brewing pairs tradition with a contemporary sense of adventure to produce clean, crisp, full-flavoured beers. The brewery is named after the beach beside its birthplace, just north of Rathmullan and Kinnegar’s roots are deeply embedded in the hilly fields and farms of Donegal.",
-        "image_source": "/static/assets/img/Kinnegar.jpg"
+        "image_source": "/static/assets/img/Kinnegar.jpg",
+        "website": "https://www.kinnegarbrewing.ie/"
 
     },
     {
         "name": "Hope", 
         "description": "Hope Beer started out in 2015 when the brewery was founded by four friends with a passion for beer and business. What began as a series of late-night kitchen table discussions is now a state-of-the-art brewery, producing an extensive range of award-winning premium craft beers.",
-        "image_source": "/static/assets/img/hope.jpg"
+        "image_source": "/static/assets/img/hope.jpg",
+        "website": "https://hopebeer.ie/"
 
     },
     {
         "name": "EightDegrees", 
         "description": "An award-winning Irish microbrewery renowned for its innovation and experimentation, Eight Degrees was established at the foot of the majestic Galtee mountains by Kiwi Scott and Aussie Cam who were lured to Ireland by two Irish cailíns.",
-        "image_source": "/static/assets/img/Eight-Degrees.jpg"
+        "image_source": "/static/assets/img/Eight-Degrees.jpg",
+        "website": "https://www.eightdegrees.ie/"
+        
 
     },
     {
         "name": "Trouble Brewing", 
         "description": "Trouble Brewing was founded in 2010 by three friends: Paul, Tom and Stephen. Tom had been homebrewing for years and insisted on sharing the fruits of his labour with Paul and Stephen. ",
-        "image_source": "/static/assets/img/Trouble.jpg"
+        "image_source": "/static/assets/img/Trouble.jpg",
+        "website": "https://troublebrewing.ie/"
 
     }
 

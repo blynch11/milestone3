@@ -5,21 +5,29 @@
 
     <h2 class="page-headers">{{ page_title }}</h2>
 
-    {% for brewery in breweries %}
+  <div class="card-deck container">
+      <div class="row card-row">
+        
+      {% for brewery in breweries %}
 
-      
-          <div class="col-md-3">
-              <div class="card brewery-card" style="width: 18rem;">
-                  <img class="card-img-top" src="{{ brewery.image_source }}" alt="Card image cap">
-                  <div class="card-body">
-                    <h5 class="card-title">{{ brewery.name }}</h5>
-                    <p class="card-text">{{ brewery.description }}</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                  </div>
-                </div>
-      </div>
+        <div class="col-sm d-flex">
+                  <div class="card-deck">
+                    <div class="card brewery-card h-100" style="width: 18rem;">
+                        <img class="card-img-top" src="{{ brewery.image_source }}" alt="Card image cap">
+                          <div class="card-body flex-fill">
+                            <h5 class="card-title">{{ brewery.name }}</h5>
+                              <p class="card-text">{{ brewery.description }}</p>
+                                  <a href="{{ brewery.website }}" target="_blank" class="btn btn-primary">Visit the site</a>
+                          </div>
+                    </div>
+                  </div>  
+                
+        </div>
 
-    {% endfor%}
+      {% endfor %}
+    </div>
+  </div>
+
 
 
 

@@ -1,9 +1,10 @@
 /* fonts */
 
 h1, .h1 {
-    font-size: 50px;
+    font-size: 300px;
     font-family: 'Six Caps', sans-serif;
     letter-spacing: 8.5px;
+    color: white;
 }
 
 
@@ -18,8 +19,8 @@ h1, .h1 {
     font-family: 'Six Caps', sans-serif;
   }
   
-  
-  .brewery-card{
+ 
+.brewery-card{
     margin: 30px auto;
   }
   
@@ -32,4 +33,13 @@ h1, .h1 {
 
 .card-text{
     font-size: medium;
+}
+
+.card-deck{
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.card-body{
+  text-align: center;
 }
