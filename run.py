@@ -25,6 +25,11 @@ def contact():
     return render_template("contact.html", page_title="contact")
 
 
+@app.route("/login")
+def login():
+    return render_template("login.html", page_title="login")
+
+
 @app.route("/breweries")
 def breweries():
     data = []
