@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block content %}
+    <h2 class="page-headers">{{ page_title }}</h2>
+
+   
+    <div class="card w-75">
+        
+        <div class="card-body">
+            <form method="POST" action="{{ url_for('register') }}">
+                <!-- Username -->
+                <div class="form-group">
+                  <label for="username">Username</label>
+                  <input type="text" class="form-control" id="username" name="username" placeholder="username">
+                  <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                </div>
+                <!-- Password -->
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Password</label>
+                  <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                </div>
+               <!-- Register -->
+                <button type="submit" class="btn btn-primary">register</button>
+              </form>
+        </div>
+      </div>
+
+
+{% endblock %}
+
+
+  
