@@ -1,18 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+{% extends "base.html" %}
+{% block content %}
+
+ 
+
+    <h2 class="page-headers">{{ page_title }}</h2>
     {% for review in reviews %}
 
-        {{ review.review }}<br>
-        {{ review.rating }} <br>
-        {{ review.style }} <br>
-
-    {% endfor %}
+    
+    <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="..." alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">{{ review.name }}</h5>
+          <p class="card-text"> {{ review.review }}</p>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">{{ review.style }}</li>
+          <li class="list-group-item">{{ review.abv }}</li>
+          <li class="list-group-item">{{ review.brewery }}</li>
+        </ul>
+        
+      </div>
+      {% endfor %}
 </body>
 </html>
+
+{% endblock %}
