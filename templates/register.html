@@ -3,26 +3,24 @@
     <h2 class="page-headers">{{ page_title }}</h2>
 
    
-    <div class="card w-75">
-        
-        <div class="card-body">
-            <form method="POST" action="{{ url_for('register') }}">
-                <!-- Username -->
-                <div class="form-group">
-                  <label for="username">Username</label>
-                  <input type="text" class="form-control" id="username" name="username" placeholder="username">
-                  <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-                </div>
-                <!-- Password -->
-                <div class="form-group">
-                  <label for="password">Password</label>
-                  <input type="password" class="form-control" id="password" placeholder="password" minlength="5" maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" required >
-                </div>
-               <!-- Register -->
-                <button type="submit" class="btn btn-primary">register</button>
-              </form>
+  
+
+      <form  method="POST" action="{{ url_for('register') }}">
+
+        <div class="mb-2">
+          <!-- Username -->
+          <label for="username">Username</label>
+          <input type="text" class="form-control" id="username" name="username" aria-describedby="emailHelp" placeholder="username">
         </div>
-      </div>
+        <!-- Password -->
+        <div class="mb-2">
+          <label for="Password" class="form-label">Password</label>
+          <input type="password" class="form-control" id="password" placeholder="password" minlength="5" maxlength="15" name="password" pattern="^[a-zA-Z0-9]{5,15}$" required ">
+        </div>
+        <!-- Register -->
+        
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
 
 
 {% endblock %}

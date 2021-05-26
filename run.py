@@ -49,8 +49,7 @@ def register():
 
 @app.route("/beers")
 def beers():
-    reviews = mongo.db.Reviews.find()
-    return render_template("beers.html", reviews = reviews, page_title="beers")
+    return render_template("beers.html", page_title="beers")
 
 
 @app.route("/contact", methods=["GET", "POST"])
