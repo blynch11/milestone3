@@ -47,9 +47,10 @@ def register():
     return render_template("register.html", page_title="register")
 
 
-@app.route("/beers")
-def beers():
-    return render_template("beers.html", page_title="beers")
+@app.route("/reviews")
+def reviews():
+    reviews = mongo.db.reviews.find()
+    return render_template("reviews.html", reviews=reviews , page_title="beers")
 
 
 @app.route("/contact", methods=["GET", "POST"])
@@ -59,8 +60,30 @@ def contact():
     return render_template("contact.html", page_title="contact")
 
 
-@app.route("/login")
+@app.route("/login",  methods=["GET", "POST"])
 def login():
+    if request.method == "POST":
+        # See if user name already exists
+        existing_user = mongo.db.users.find_one(
+            {"username": request.form.get("username").lower()})
+
+        if existing_user:
+                # ensure the hashed password is a match
+            if check_password_hash(
+                existing_user["password"], request.form.get("password")):
+                    session["user"] = request.form.get("username").lower()
+                    flash("welcome, {}".format(request.form.get("username")))
+                    
+            else:
+                # password doesn't match
+                flash("incorrect Username and/or Password")
+                return redirect(url_for("login"))
+
+        else:
+                # Username entered does not exist
+            flash("Incorrect Username and/or Password ")
+            return redirect(url_for("login"))
+
     return render_template("login.html", page_title="login")
 
 
