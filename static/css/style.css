@@ -70,6 +70,15 @@ h1, .h1 {
   padding: 10px;
 }
 
+.rate{
+  text-align: center;
+}
+
+.review-button{
+  text-align: center;
+  margin: 10px auto;
+}
+
 /* -- sGoogle Map --*/
 
 div #map {min-height: 360px;}

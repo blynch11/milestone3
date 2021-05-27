@@ -26,7 +26,7 @@
       <div class="row">
         <div class="col-sm-5">
       <div class="card user-review-card" style="width: 18rem;">
-      <form  method="POST" action="" class="user-beer-reviews">
+      <form  method="POST" action="{{ url_for('user_reviews') }}" class="user-beer-reviews">
         <!-- Beer Name -->
         <div class="form-group form-borders">
           <label for="beer_name"><b>Beer Name</b></label>
@@ -34,7 +34,7 @@
         </div>
         <!-- Beer Style -->
         <div class="form-group form-borders">
-          <label for="exampleFormControlSelect1"><b>Beer Style</b></label>
+          <label for="beer_style"><b>Beer Style</b></label>
           <select class="form-control" id="exampleFormControlSelect1">
             <option>1</option>
             <option>2</option>
@@ -47,8 +47,13 @@
         </div> 
         <!-- Beer review -->
       <div class="form-group form-borders">
-        <label for="exampleFormControlTextarea1"><b>Add a review</b></label>
-        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        <label for="beer_review"><b>Add a review</b></label>
+        <div class="form-group">
+          
+          <textarea class="form-control" name="beer_review" id="exampleFormControlTextarea1" rows="3"></textarea>
+        </div>
+        
+        
       </div>
       <div class="rate">
         <input type="radio" id="star5" name="rate" value="5" />
@@ -61,6 +66,10 @@
         <label for="star2" title="text">2 stars</label>
         <input type="radio" id="star1" name="rate" value="1" />
         <label for="star1" title="text">1 star</label>
+      </div>
+      <br>
+      <div class="review-button">
+        <button type="submit" class="btn btn-primary">Submit</button>
       </div>
     </form>
   </div>

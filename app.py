@@ -47,11 +47,27 @@ def register():
     return render_template("register.html", page_title="register")
 
 
-@app.route("/reviews")
-def reviews():
-    reviews = mongo.db.reviews.find()
-    return render_template("reviews.html", reviews=reviews , page_title="beers")
+@app.route("/user_reviews", methods=["GET", "POST"])
+def user_reviews():
+    if request.method == "POST":
 
+            user_reviews = mongo.db.reviews
+
+            user_reviews = {
+                "beer_name": request.form.get("beer_name"),
+                "beer_style": request.form.get("beer_style"),
+                "beer_review": request.form.get("beer_review")
+
+            }
+            mongo.db.reviews.insert_one(user_reviews)
+
+
+            session["reviews"] = request.form.get("beer_name")
+            session["reviews"] = request.form.get("beer_style")
+            session["reviews"] = request.form.get("beer_review")
+
+
+    return render_template("user_reviews.html" , page_title="beers")
 
 @app.route("/contact", methods=["GET", "POST"])
 def contact():
