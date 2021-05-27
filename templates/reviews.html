@@ -6,7 +6,7 @@
     <h2 class="page-headers">{{ page_title }}</h2>
     {% for review in reviews %}
 
-    
+    <!--
     <div class="card" style="width: 18rem;">
         <img class="card-img-top" src="..." alt="Card image cap">
         <div class="card-body">
@@ -20,8 +20,57 @@
         </ul>
         
       </div>
+
+    -->
       {% endfor %}
+      <div class="row">
+        <div class="col-sm-5">
+      <div class="card user-review-card" style="width: 18rem;">
+      <form  method="POST" action="" class="user-beer-reviews">
+        <!-- Beer Name -->
+        <div class="form-group form-borders">
+          <label for="beer_name"><b>Beer Name</b></label>
+          <input type="text" class="form-control" id="beer_name" name="beer_name" placeholder="Duff Beer..">
+        </div>
+        <!-- Beer Style -->
+        <div class="form-group form-borders">
+          <label for="exampleFormControlSelect1"><b>Beer Style</b></label>
+          <select class="form-control" id="exampleFormControlSelect1">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+          </select>
+        </div> 
+        <!-- Beer review -->
+      <div class="form-group form-borders">
+        <label for="exampleFormControlTextarea1"><b>Add a review</b></label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+      </div>
+      <div class="rate">
+        <input type="radio" id="star5" name="rate" value="5" />
+        <label for="star5" title="text">5 stars</label>
+        <input type="radio" id="star4" name="rate" value="4" />
+        <label for="star4" title="text">4 stars</label>
+        <input type="radio" id="star3" name="rate" value="3" />
+        <label for="star3" title="text">3 stars</label>
+        <input type="radio" id="star2" name="rate" value="2" />
+        <label for="star2" title="text">2 stars</label>
+        <input type="radio" id="star1" name="rate" value="1" />
+        <label for="star1" title="text">1 star</label>
+      </div>
+    </form>
+  </div>
+</div>
+</div>
+
 </body>
 </html>
+
+
+
 
 {% endblock %}

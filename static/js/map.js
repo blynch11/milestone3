@@ -38,16 +38,7 @@ function initMap() {
         lng: -6.3209,
         location: "Rascal",
     }, 
-    {
-        lat: 52.2773,
-        lng: -8.2696,
-        location: "Eight Degrees",
-    }, 
-    {
-        lat: 52.2773,
-        lng: -8.2696,
-        location: "Eight Degrees",
-    }, 
+     
     ];
 
     let markers = locations.map(function(location, i) {
