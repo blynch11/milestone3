@@ -43,3 +43,12 @@ h1, .h1 {
 .card-body{
   text-align: center;
 }
+
+#map{
+  height: 700px;
+  width: 80%;
+  margin: 100px auto;
+
+}
+
+div #map {min-height: 360px;}

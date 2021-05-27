@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Six+Caps&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" type="text/css">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
+    <link rel="stylesheet" href="map.js">
     <title>Home Page</title>
 </head>
 
@@ -99,6 +100,11 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
+        <script src="/static/js/map.js"></script>
+        <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
+        <script async
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDnOAqgjVOHhbsdMF7KT0fDejOvcgxo6Ys&callback=initMap">
+        </script>
 
         <script>
             $("#copyright").text(new Date().getFullYear());
