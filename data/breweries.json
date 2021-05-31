@@ -27,6 +27,30 @@
         "image_source": "/static/assets/img/Trouble.jpg",
         "website": "https://troublebrewing.ie/"
 
+    },
+    {
+        "name": "Rascal", 
+        "description": "Rascals Brewing was founded in 2014 by Emma Devlin and Cathal O’Donoghue. The pair were living and working in New Zealand and developed a taste and passion for the booming Kiwi craft beer industry. ",
+        "image_source": "/static/assets/img/rascal.png",
+        "website": "https://rascalsbrewing.com/about/"
+    },
+    {
+        "name": "White Hag", 
+        "description": "We are a modern independent craft brewery from Sligo, on Ireland’s Wild Atlantic Way. We brew innovative and ground breaking beers, inspired by ancient and classic styles.  ",
+        "image_source": "/static/assets/img/white-hag.png",
+        "website": "https://www.thewhitehag.com/about-us/"
+    },
+    {
+        "name": "Whiplash", 
+        "description": "Whiplash began as a side project for Alan & Alex back in 2016. Both working in brewing already, they rented tanks at the weekend and released single batch small releases for fun from their own place of work and other friend’s breweries around Ireland. ",
+        "image_source": "/static/assets/img/whiplash.png",
+        "website": "https://www.whiplashbeer.com/"
+    },
+    {
+        "name": "White Hag", 
+        "description": "We are a modern independent craft brewery from Sligo, on Ireland’s Wild Atlantic Way. We brew innovative and ground breaking beers, inspired by ancient and classic styles.  ",
+        "image_source": "/static/assets/img/white-hag.png",
+        "website": "https://www.thewhitehag.com/about-us/"
     }
 
 ]

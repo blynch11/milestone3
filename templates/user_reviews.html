@@ -4,26 +4,13 @@
  
 
     <h2 class="page-headers">{{ page_title }}</h2>
-    {% for review in reviews %}
-
-    <!--
-    <div class="card" style="width: 18rem;">
-        <img class="card-img-top" src="..." alt="Card image cap">
-        <div class="card-body">
-          <h5 class="card-title beer-name">{{ review.name }}</h5>
-          <p class="card-text card-review-text"> {{ review.review }}</p>
-        </div>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item">{{ review.style }}</li>
-          <li class="list-group-item">{{ review.abv }}</li>
-          <li class="list-group-item">{{ review.brewery }}</li>
-        </ul>
-        
-      </div>
-
-    -->
-      {% endfor %}
+   
       <div class="row">
+        <div class="col-sm-7 beer-flight-div">
+          <p>Add your review to the list!</p>
+          
+         
+        </div>
         <div class="col-sm-5">
       <div class="card user-review-card" style="width: 18rem;">
       <form  method="POST" action="{{ url_for('user_reviews') }}" class="user-beer-reviews">
@@ -35,16 +22,9 @@
         <!-- Beer Style -->
         <div class="form-group form-borders">
           <label for="beer_style"><b>Beer Style</b></label>
-          <select class="form-control" id="exampleFormControlSelect1">
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5</option>
-            <option>6</option>
-            <option>7</option>
-          </select>
-        </div> 
+          <input type="text" class="form-control" id="beer_style" name="beer_style" placeholder="IPA..">
+        </div>
+       
         <!-- Beer review -->
       <div class="form-group form-borders">
         <label for="beer_review"><b>Add a review</b></label>
@@ -56,16 +36,16 @@
         
       </div>
       <div class="rate">
-        <input type="radio" id="star5" name="rate" value="5" />
+        <input type="radio" id="star5" name="star5" value="5" />
         <label for="star5" title="text">5 stars</label>
-        <input type="radio" id="star4" name="rate" value="4" />
+        <input type="radio" id="star4" name="star4" value="4" />
         <label for="star4" title="text">4 stars</label>
-        <input type="radio" id="star3" name="rate" value="3" />
+        <input type="radio" id="star3" name="star3" value="3" />
         <label for="star3" title="text">3 stars</label>
-        <input type="radio" id="star2" name="rate" value="2" />
+        <input type="radio" id="star2" name="star2" value="2" />
         <label for="star2" title="text">2 stars</label>
-        <input type="radio" id="star1" name="rate" value="1" />
-        <label for="star1" title="text">1 star</label>
+        <input type="radio" id="star1" name="star1" value="1" />
+        <label for="star1" title="text">1 star</label> 
       </div>
       <br>
       <div class="review-button">
@@ -75,7 +55,30 @@
   </div>
 </div>
 </div>
+<div class="row">
+{% for review in reviews %}
 
+<div class="col-sm-3">
+<div class="card" style="width: 18rem;">
+   
+    <div class="card-body">
+      <h5 class="card-title beer-name">{{ review.beer_name }}</h5>
+      <p class="card-text card-review-text"> {{ review.beer_style }}</p>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">{{ review.beer_name }}</li>
+      <li class="list-group-item">{{ review.beer_style }}</li>
+      <li class="list-group-item">{{ review.beer_review }}</li>
+    </ul>
+    
+  </div>
+
+</div>
+
+
+
+  {% endfor %}
+</div>
 </body>
 </html>
 

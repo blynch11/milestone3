@@ -4,10 +4,11 @@
 
    
   
-<div class="row">
-  <div class="col-sm-4">
+<div class="row login-row">
+  <div class="col-sm-4 return-login">
   <form  method="POST" action="{{ url_for('login') }}">
-          <h3 class="login-header">Login Here!</h3>
+    
+          
           <div class="mb-2">
             <!-- Username -->
             <label for="username">Username</label>
@@ -24,10 +25,20 @@
           <button type="submit" class="btn btn-primary">Login</button>
         </form>
       </div>
+      <div class="col-sm-6">
+        <h2 class="post-title welcome-message"> Good to see you again! Sign in here</h2>
+        <i class="fas fa-arrow-left"></i>
+      </div>
 
-  <div class="col-sm-4">
+<div class="row register-row">
+  <div class="col-sm-6">
+    <h2 class="post-title welcome-message"> New? Sign up here</h2>
+    <i class="fas fa-arrow-right"></i>
+
+  </div>
+  <div class="col-sm-4 registration">
         <form  method="POST" action="{{ url_for('register') }}">
-          <h3 class="login-header">New users register here!</h3>
+          
           <div class="mb-2">
             <!-- Username -->
             <label for="username">Username</label>
@@ -44,6 +55,7 @@
           <button type="submit" class="btn btn-primary">Submit</button>
         </form>
       </div>
+</div>
 </div>
 
 

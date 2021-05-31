@@ -7,6 +7,22 @@ h1, .h1 {
     color: white;
 }
 
+.welcome-message{
+  text-align: center;
+  font-family: 'Six Caps', sans-serif;
+  font-size: 50px;
+  margin: 25px;
+  letter-spacing: 3px;
+}
+
+.fas{
+  margin: 50px;
+}
+
+
+.fas:hover{
+  color: #c59b08;
+}
 
 
 
@@ -35,6 +51,12 @@ h1, .h1 {
     font-size: medium;
 }
 
+.card-title{
+  font-family:'Six Caps', sans-serif;
+  font-size: 30px;
+  letter-spacing: 2.5px;
+}
+
 .card-deck{
   margin-top: 40px;
   margin-bottom: 40px;
@@ -60,10 +82,9 @@ h1, .h1 {
   
 }
 
-.user-review-card{
-  border-color: black;
-  background-image: url(/static/assets/img/beerbubbles.jpg); opacity: 0.9;
-  border-radius: 10%;
+.beer-flight{
+  width: 100%;
+  height: 70%;
 }
 
 .form-borders{
@@ -76,8 +97,27 @@ h1, .h1 {
 
 .review-button{
   text-align: center;
-  margin: 10px auto;
+  margin: 20px auto;
 }
+
+/* -- Login/register --*/
+
+.fa-arrow-right{
+  font-size: 150px;
+}
+
+.fa-arrow-left{
+  font-size: 150px;
+}
+
+.btn-primary{
+  margin-top: 40px;
+}
+
+.login-row{
+  background-color: lightgrey;
+}
+
 
 /* -- sGoogle Map --*/
 

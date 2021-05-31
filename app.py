@@ -24,7 +24,7 @@ mongo = PyMongo(app)
 def index():
     return render_template("index.html")
 
-@app.route("/register", methods=["GET", "POST"])
+@app.route("/login", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
         # check if username exists already
@@ -33,7 +33,7 @@ def register():
 
         if existing_user:
             flash("username already exists")
-            return redirect(url_for("register"))
+            return redirect(url_for("login"))
 
         register = {
             "username": request.form.get("username").lower(),
@@ -44,30 +44,30 @@ def register():
         #put the new user into 'session' cookie
         session["user"] = request.form.get("username").lower()
         flash("Registration Successful")
-    return render_template("register.html", page_title="register")
+    return render_template("login.html", page_title="register")
 
 
 @app.route("/user_reviews", methods=["GET", "POST"])
 def user_reviews():
     if request.method == "POST":
 
-            user_reviews = mongo.db.reviews
-
-            user_reviews = {
+        reviews = mongo.db.reviews.find()
+        # get users reviews and add their key values to DB
+        user_reviews = {
                 "beer_name": request.form.get("beer_name"),
                 "beer_style": request.form.get("beer_style"),
-                "beer_review": request.form.get("beer_review")
+                "beer_review": request.form.get("beer_review"),
 
             }
-            mongo.db.reviews.insert_one(user_reviews)
+        mongo.db.reviews.insert_one(user_reviews)
 
+        session["reviews"] = request.form.get("beer_name")
+        session["reviews"] = request.form.get("beer_style")
+        session["reviews"] = request.form.get("beer_review")
+        return redirect(index)
 
-            session["reviews"] = request.form.get("beer_name")
-            session["reviews"] = request.form.get("beer_style")
-            session["reviews"] = request.form.get("beer_review")
-
-
-    return render_template("user_reviews.html" , page_title="beers")
+    reviews = mongo.db.reviews.find()
+    return render_template("user_reviews.html", reviews=reviews)
 
 @app.route("/contact", methods=["GET", "POST"])
 def contact():
@@ -108,8 +108,8 @@ def breweries():
     data = []
     with open("data/breweries.json", "r") as json_data:
         data = json.load(json_data)
-    return render_template("breweries.html", page_title="breweries", breweries=data)
-
+    return render_template("breweries.html", 
+        page_title="breweries", breweries=data)
 
 
 
