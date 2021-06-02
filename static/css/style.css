@@ -82,6 +82,16 @@ h1, .h1 {
   
 }
 
+.beer-reviews{
+  margin: 50px auto;
+}
+
+.beer-reviews-style{
+  font-family: 'Stint Ultra Condensed', cursive;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+}
+
 .beer-flight{
   width: 100%;
   height: 70%;

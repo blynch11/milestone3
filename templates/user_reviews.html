@@ -58,14 +58,14 @@
 <div class="row">
 {% for review in reviews %}
 
-<div class="col-sm-3">
+<div class="col-sm-3 beer-reviews">
 <div class="card" style="width: 18rem;">
    
-    <div class="card-body">
+    <div class="card-body beer-reviews-style">
       <h5 class="card-title beer-name">{{ review.beer_name }}</h5>
-      <p class="card-text card-review-text"> {{ review.beer_style }}</p>
+      <p class="card-text card-review-text "> {{ review.beer_style }}</p>
     </div>
-    <ul class="list-group list-group-flush">
+    <ul class="list-group list-group-flush beer-reviews-style">
       <li class="list-group-item">{{ review.beer_name }}</li>
       <li class="list-group-item">{{ review.beer_style }}</li>
       <li class="list-group-item">{{ review.beer_review }}</li>
