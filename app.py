@@ -24,6 +24,14 @@ mongo = PyMongo(app)
 def index():
     return render_template("index.html")
 
+
+@app.route("/search", methods=["GET", "POST"])
+def search():
+    query = request.form.get("query")
+    reviews = mongo.db.reviews.find({"$text": {"$search": query}})
+    return render_template("user_reviews.html", reviews=reviews)
+
+
 @app.route("/login", methods=["GET", "POST"])
 def register():
     if request.method == "POST":

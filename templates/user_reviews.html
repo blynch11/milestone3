@@ -1,7 +1,18 @@
 {% extends "base.html" %}
 {% block content %}
 
- 
+    <div class="row search-bar">
+      <div class="col-md-8 col-sm-12 col-lg-8">
+        <form action="{{ url_for('search') }}" method="POST"></form>
+        <div class="input-group">
+          <input type="text" name="query" id="query" class="form-control rounded" aria-label="Search"
+            aria-describedby="search-addon" />
+          <a href="{{ url_for('user_reviews') }}">search<button type="submit" class="btn btn-outline-primary"></button></a>
+        
+        </div>
+      </div>
+
+    </div>
 
     <h2 class="page-headers">{{ page_title }}</h2>
    
