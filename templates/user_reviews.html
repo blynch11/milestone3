@@ -3,12 +3,14 @@
 
     <div class="row search-bar">
       <div class="col-md-8 col-sm-12 col-lg-8">
-        <form action="{{ url_for('search') }}" method="POST"></form>
+        <form action="{{ url_for('search') }}" method="POST">
         <div class="input-group">
           <input type="text" name="query" id="query" class="form-control rounded" aria-label="Search"
             aria-describedby="search-addon" />
-          <a href="{{ url_for('user_reviews') }}">search<button type="submit" class="btn btn-outline-primary"></button></a>
-        
+            
+          
+          <button type="submit" class="btn btn-outline-primary">Search!</button>
+        </form>
         </div>
       </div>
 
@@ -46,18 +48,7 @@
         
         
       </div>
-      <div class="rate">
-        <input type="radio" id="star5" name="star5" value="5" />
-        <label for="star5" title="text">5 stars</label>
-        <input type="radio" id="star4" name="star4" value="4" />
-        <label for="star4" title="text">4 stars</label>
-        <input type="radio" id="star3" name="star3" value="3" />
-        <label for="star3" title="text">3 stars</label>
-        <input type="radio" id="star2" name="star2" value="2" />
-        <label for="star2" title="text">2 stars</label>
-        <input type="radio" id="star1" name="star1" value="1" />
-        <label for="star1" title="text">1 star</label> 
-      </div>
+    
       <br>
       <div class="review-button">
         <button type="submit" class="btn btn-primary">Submit</button>
