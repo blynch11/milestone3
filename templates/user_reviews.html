@@ -1,8 +1,14 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <div class="row search-bar">
-      <div class="col-md-8 col-sm-12 col-lg-8">
+   
+
+<h2 class="page-headers">{{ page_title }}</h2>
+
+<div class="container search-bar">
+  
+    <div class="col-sm-6 col-md-6 col-lg-6 search-bar">
+      <h2 class="search-bar-head">Find your new favourite beer!</h2>
         <form action="{{ url_for('search') }}" method="POST">
         <div class="input-group">
           <input type="text" name="query" id="query" class="form-control rounded" aria-label="Search"
@@ -12,68 +18,69 @@
           <button type="submit" class="btn btn-outline-primary">Search!</button>
         </form>
         </div>
-      </div>
-
     </div>
-
-    <h2 class="page-headers">{{ page_title }}</h2>
+  
+</div>
    
-      <div class="row">
-        <div class="col-sm-7 beer-flight-div">
-          <p>Add your review to the list!</p>
-          
-         
-        </div>
-        <div class="col-sm-5">
-      <div class="card user-review-card" style="width: 18rem;">
-      <form  method="POST" action="{{ url_for('user_reviews') }}" class="user-beer-reviews">
-        <!-- Beer Name -->
-        <div class="form-group form-borders">
-          <label for="beer_name"><b>Beer Name</b></label>
-          <input type="text" class="form-control" id="beer_name" name="beer_name" placeholder="Duff Beer..">
-        </div>
-        <!-- Beer Style -->
-        <div class="form-group form-borders">
-          <label for="beer_style"><b>Beer Style</b></label>
-          <input type="text" class="form-control" id="beer_style" name="beer_style" placeholder="IPA..">
-        </div>
-       
-        <!-- Beer review -->
-      <div class="form-group form-borders">
-        <label for="beer_review"><b>Add a review</b></label>
-        <div class="form-group">
-          
-          <textarea class="form-control" name="beer_review" id="exampleFormControlTextarea1" rows="3"></textarea>
-        </div>
-        
-        
+<div class="container add-review">
+
+  <div class="row">
+
+      <div class="col-lg-5 col-md-5 col-sm-10 add-review-text">
+            <p>Add your review to the list! Here on On The Hop we rely on beer enthusiasts, like you, to add your own review to our catalogue of reviews! </p>
       </div>
-    
-      <br>
-      <div class="review-button">
-        <button type="submit" class="btn btn-primary">Submit</button>
+      
+      <div class="col-lg-7 col-md-7 col-sm-10">
+        <div class="card user-review-card" style="width: 18rem;">
+            <form  method="POST" action="{{ url_for('user_reviews') }}" class="user-beer-reviews">
+            <!-- Beer Name -->
+              <div class="form-group form-borders">
+                <label for="beer_name"><b>Beer Name</b></label>
+                <input type="text" class="form-control" id="beer_name" name="beer_name" placeholder="Duff Beer..">
+              </div>
+            <!-- Beer Style -->
+              <div class="form-group form-borders">
+                <label for="beer_style"><b>Beer Style</b></label>
+                <input type="text" class="form-control" id="beer_style" name="beer_style" placeholder="IPA..">
+              </div>
+          
+            <!-- Beer review -->
+            <div class="form-group form-borders">
+              <label for="beer_review"><b>Add a review</b></label>
+              <div class="form-group">
+                
+                <textarea class="form-control" name="beer_review" id="exampleFormControlTextarea1" maxlength="200" rows="3"></textarea>
+              </div>
+          
+          
+            </div>
+          
+            <br>
+            <div class="review-button">
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+            </form>
+        </div>
       </div>
-    </form>
+      
   </div>
 </div>
-</div>
-<div class="row">
-{% for review in reviews %}
 
-<div class="col-sm-6 col-md-3 col-lg-4 beer-reviews">
-<div class="card reviews-card" style="width: 18rem;">
-   
-    <div class="card-body beer-reviews-style">
-      <h5 class="card-title beer-name">{{ review.beer_name }}</h5>
-      <p class="card-text card-review-text "> {{ review.beer_style }}</p>
-    </div>
-    <ul class="list-group list-group-flush beer-reviews-style">
-      <li class="list-group-item beer-name">{{ review.beer_name }}</li>
-      <li class="list-group-item beer-review-content">{{ review.beer_style }}</li>
-      <li class="list-group-item beer-review-content">{{ review.beer_review }}</li>
-    </ul>
+  <div class="row m-sm-1 m-md-3 m-lg-5">
+  {% for review in reviews %}
+
+  <div class="col m-sm-1 m-md-2 m-lg-2 beer-reviews">
+  <div class="card reviews-card" style="width: 18rem;">
     
-  </div>
+      <div class="card-body">
+        <h5 class="card-title-user-review">{{ review.beer_name }}</h5>
+        <p class="beer-style">{{ review.beer_style }}</p>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item user-review">{{ review.beer_review }}</li>
+      </ul>
+      
+    </div>
 
 </div>
 
