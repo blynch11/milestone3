@@ -11,13 +11,13 @@
       <h2 class="search-bar-head">Find your new favourite beer!</h2>
         <form action="{{ url_for('search') }}" method="POST">
         <div class="input-group">
-          <input type="text" name="query" id="query" class="form-control rounded" aria-label="Search"
-            aria-describedby="search-addon" />
+          <input type="text" name="query" id="query" class="form-control rounded"/>
             
           
           <button type="submit" class="btn btn-outline-primary">Search!</button>
-        </form>
         </div>
+        </form>
+        
     </div>
   
 </div>
@@ -49,7 +49,7 @@
               <label for="beer_review"><b>Add a review</b></label>
               <div class="form-group">
                 
-                <textarea class="form-control" name="beer_review" id="exampleFormControlTextarea1" maxlength="200" rows="3"></textarea>
+                <textarea class="form-control" name="beer_review" id="beer_review" maxlength="200" rows="3"></textarea>
               </div>
           
           
