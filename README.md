@@ -112,32 +112,13 @@ This website was created as a place for craft beer lovers to learn about and sha
 
 ### Testing User Stories form User Experience (UX) section
 - #### As a general user;
-    1. I want to be informed about Restruction's concept.
+    1. I want to be informed about new beers on the market.
     2. I want to be able to navigate the website easily. 
     3. I want to see some sample items without having to register or login. 
     4. I want to easily find the register page and login page.
-    5. I want to be able to search for exactly what I am looking for without having to trawl through every posted item. 
+    5. I want to be able to search for exact styles of beer/breweries.
     6. I want to be able to edit my account.
-- #### As a construction industry professional;
-    1. I want to understand the format and types of items being displayed without having to register or login. 
-    2. I want to be prompted to register as a user. 
-    3. I want to easily find the register and login page's. 
-    4. I want to be able to post item's myself easily. 
-    5. I want to be able to view items and search for items by their name. 
-    6. I want to be able to view images of items and upload my own images of items I have posted. 
-    7. I want to be able to edit and delete items I have posted. 
-    8. I want to be able to edit my account. 
-    9. I want to be able to set specific contact details for the items I post. 
-    10. I want to set a date for which the item will be removed. 
-- #### As a charity/sustainability officer/self builder;
-    1. I want to be informed about Restruction's concept.
-    2. I want to be able to navigate the website easily. 
-    3. I want to see some sample items without having to register or login. 
-    4. I want to easily find the register page and login page. 
-    5. I want to be able to contact an item owner easily without having to fill out multiple forms etc. 
-    6. I want to judge to determine the items condition easily through a description and image. 
-    7. I want to be told when the item I am looking at will be removed/destroyed. 
-    8. I want to feel that the website has the right ethos and I would feel comfortable supporting it. 
+
 
 ### Usability Testing
 - x
